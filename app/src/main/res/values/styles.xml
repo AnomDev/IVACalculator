@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Aquí estamos cambiando el estilo de todos los TextView de la app pero heredando de su clase padre "material component"
+    de esta forma, al trabajar con su hijo "tipCalculator", nos evitamos futuros conflictos en el original -->
+    <style name="Widget.IvaCalculator.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <!--Aquí lo mismo para los radio buttons -->
+    <style name="Widget.IvaCalculator.CompoundButton.RadioButton" parent="Widget.MaterialComponents.CompoundButton.RadioButton">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <!--Y lo mismo pero para el elemento switch -->
+    <style name="Widget.IvaCalculator.CompoundButton.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="android:minHeight">@dimen/min_text_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+    
+    <!-- Si queremos que nuestro EditText de Material design sea del tipo outlined, hemos de meterle este estilo-->
+    <style name="Widget.IvaCalculator.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+    </style>
+
+
+
+</resources>

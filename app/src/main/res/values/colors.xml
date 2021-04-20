@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- New color palette -->
+    <color name="red">#b71c1c</color>
+    <color name="red_light">#f05545</color>
+    <color name="red_dark">#7f0000</color>
+
+    <color name="blue">#1a237e</color>
+    <color name="blue_light">#534bae</color>
+    <color name="blue_dark">#000051</color>
+
+    <color name="ocre">#f9a825</color>
+
+</resources>

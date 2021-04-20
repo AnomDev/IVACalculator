@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Este archivo sirve para tener las dimensiones de los textos, alturas o anchuras en un único lugar y poder así
+ facilitar los cambios que deban introducirse, en lugar de ir uno a uno en cada una de las vistas o textox-->
+<resources>
+    <dimen name="min_text_height">48dp</dimen>
+</resources>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/icon_importe_con_iva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_importe_con_iva"
+            app:layout_constraintBottom_toBottomOf="@id/importe_con_iva_til"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/importe_con_iva_til" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/importe_con_iva_til"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:hint="@string/importe_a_calcular"
+            app:layout_constraintStart_toEndOf="@id/icon_importe_con_iva"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/importe_con_iva_tiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        -
+
+        <ImageView
+            android:id="@+id/icon_tipo_gravamen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_tipo_gravamen"
+            app:layout_constraintBottom_toBottomOf="@id/service_question_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/service_question_tv" />-->
+
+        <TextView
+            android:id="@+id/service_question_tv"
+            style="@style/Widget.IvaCalculator.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tipo_de_gravamen"
+            app:layout_constraintStart_toEndOf="@id/icon_tipo_gravamen"
+            app:layout_constraintTop_toBottomOf="@id/importe_con_iva_til" />
+
+        <RadioGroup
+            android:id="@+id/tipo_gravamen_rg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/general_21_rb"
+            app:layout_constraintStart_toStartOf="@id/service_question_tv"
+            app:layout_constraintTop_toBottomOf="@id/service_question_tv">
+            <!--android:orientation="vertical"-->
+
+            <RadioButton
+                android:id="@+id/general_21_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/iva_general" />
+
+            <RadioButton
+                android:id="@+id/reducido_10_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/iva_reducido" />
+
+            <RadioButton
+                android:id="@+id/superreducido_4_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/iva_superreducido" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/icon_redondeo_alza_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_redondeo_alza"
+            app:layout_constraintBottom_toBottomOf="@id/redondeo_alza_sw"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/redondeo_alza_sw" />
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/redondeo_alza_sw"
+            style="@style/Widget.IvaCalculator.CompoundButton.Switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="@string/redondear_al_alza"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_redondeo_alza_iv"
+            app:layout_constraintTop_toBottomOf="@id/tipo_gravamen_rg" />
+
+        <Button
+            android:id="@+id/calcular_importe_sin_iva_btn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/ocre"
+            android:text="@string/calcular_importe_sin_iva"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/redondeo_alza_sw"
+            app:layout_constraintTop_toBottomOf="@id/redondeo_alza_sw" />
+
+        <Button
+            android:id="@+id/calcular_importe_con_iva_btn"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/calcular_importe_con_iva"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/redondeo_alza_sw" />
+
+        <TextView
+            android:id="@+id/importe_calculado_tv"
+            style="@style/Widget.IvaCalculator.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calcular_importe_sin_iva_btn"
+            tools:text="Importe sin IVA: 10.00.-€" />
+
+        <TextView
+            android:id="@+id/importe_del_impuesto_tv"
+            style="@style/Widget.IvaCalculator.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/importe_calculado_tv"
+            tools:text="Valor del IVA: 3.00.-€" />
+
+        <TextView
+            android:id="@+id/signature_tv"
+            style="@style/Widget.IvaCalculator.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="@string/anomalousdeveloper_2021"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/importe_del_impuesto_tv" />
+        <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/email_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tip_result_tv"
+            app:srcCompat="@android:drawable/ic_dialog_email" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

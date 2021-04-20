@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">IVA Calculator</string>
+    <string name="importe_a_calcular">Importe base</string>
+    <string name="tipo_de_gravamen">¿Cuál es el tipo de gravamen?</string>
+    <string name="iva_general">General (21%)</string>
+    <string name="iva_reducido">Reducido (10%)</string>
+    <string name="iva_superreducido">Superreducido (4%)</string>
+    <string name="importe_calculado">Importe resultante: %s</string>
+    <string name="importe_del_impuesto">Importe del IVA: %s</string>
+
+    <string name="redondear_al_alza">Redondear al alza</string>
+    <string name="calcular_importe_con_iva">Calcular importe <b>\ncon IVA</b></string>-->
+    <string name="calcular_importe_sin_iva">Calcular importe <b>\nsin IVA</b></string>
+    <string name="anomalousdeveloper_2021"> Developed by <b>AnomalousDeveloper</b> © 2021</string>-->
+
+    <!-- TODO: Próximamente, meter también el IGIC de Canarias-->
+    <!--<string name="round_up_tip">IGIC General (7%)</string>
+    <string name="calculate">IGICReducido (3%)</string>-->
+</resources>
